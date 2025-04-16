@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   prometheus:
     image: prom/prometheus:latest
@@ -28,11 +30,5 @@ services:
       - /sys:/host/sys:ro
       - /:/rootfs:ro
 
-
 volumes:
   prometheus_data:
-  grafana_data:
-
-networks:
-  monitoring:
-    driver: bridge
